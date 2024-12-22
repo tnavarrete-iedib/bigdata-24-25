@@ -1,0 +1,4 @@
+{"Reserva_ID": 1, "Client_Info": {"Nom": "Aina Torres", "Mail": "atorres@gmail.com"}, "Serveis_Addicionals": ["Esmorzar", "Spa"], "Despeses_Per_Categoria": {"Esmorzar": 30, "Spa": 50}}
+{"Reserva_ID": 2, "Client_Info": {"Nom": "Joana Serra", "Mail": "jserra@gmail.com"}, "Serveis_Addicionals": ["Wi-Fi", "Aparcament"], "Despeses_Per_Categoria": {"Wi-Fi": 10, "Aparcament": 15}}
+{"Reserva_ID": 3, "Client_Info": {"Nom": "Javier Ruiz", "Mail": "ruizjavier@hotmail.com"}, "Serveis_Addicionals": ["Esmorzar"], "Despeses_Per_Categoria": {"Esmorzar": 25}}
+{"Reserva_ID": 4, "Client_Info": {"Nom": "Pere Riera", "Mail": "pereriera@gmail.com"}, "Serveis_Addicionals": ["Spa", "Aparcament", "Esmorzar"], "Despeses_Per_Categoria": {"Spa": 50, "Aparcament": 20, "Esmorzar": 40}}
