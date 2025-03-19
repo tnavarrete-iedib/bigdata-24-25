@@ -5,8 +5,8 @@ FROM openjdk:8-jre-slim
 
 ## Descarregam e instal·lam les dependències
 # Definim les variables del Dockerfile
+ARG spark_version
 ARG hdfs_simulat=/opt/workspace #directori compartit on simulam HDFS
-#ARG spark_version=3.5.1
 ARG spark_worker_web=8081 # port per a la interfície web del node worker
 
 # Definim les variables d'entorn amb el directori que simula HDFS

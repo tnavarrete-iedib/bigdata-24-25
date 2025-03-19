@@ -5,9 +5,9 @@ FROM openjdk:8-jre-slim
 
 ## Descarregam e instal·lam les dependències
 # Definim les variables del Dockerfile
+ARG spark_version
+ARG jupyterlab_version
 ARG hdfs_simulat=/opt/workspace #directori compartit on simulam HDFS
-#ARG spark_version=3.5.1
-#ARG jupyterlab_version=4.1.5
 ARG jupyterlab_web=8888 # port per a la interfície web de JupyterLab
 
 # Definim la variable d'entorn amb el port de JupyterLab

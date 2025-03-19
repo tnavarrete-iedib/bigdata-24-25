@@ -6,10 +6,11 @@ FROM openjdk:8-jre-slim
 ## Descarregam e instal·lam les dependències
 # Definim les variables del Dockerfile
 ARG hdfs_simulat=/opt/workspace #directori compartit on simulam HDFS
-#ARG spark_version=3.5.1
+ARG spark_version
 ARG spark_master_web=8080 # port per a la interfície web del node master
 
 # Definim les variables d'entorn amb el directori que simula HDFS
+
 ENV HDFS_SIMULAT=${hdfs_simulat}
 
 # Instal·lam la darrera versió estable de Python3
