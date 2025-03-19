@@ -6,8 +6,8 @@ FROM openjdk:8-jre-slim
 ## Descarregam e instal·lam les dependències
 # Definim les variables del Dockerfile
 ARG hdfs_simulat=/opt/workspace #directori compartit on simulam HDFS
-ARG spark_version=3.5.1
-ARG jupyterlab_version=4.1.5
+#ARG spark_version=3.5.1
+#ARG jupyterlab_version=4.1.5
 ARG jupyterlab_web=8888 # port per a la interfície web de JupyterLab
 
 # Definim la variable d'entorn amb el port de JupyterLab
@@ -33,7 +33,7 @@ RUN pip3 install wget pyspark==${spark_version} jupyterlab==${jupyterlab_version
 ## Executam les ordres en arrencar el contenidor
 # Montam el HDFS simulat en una carpeta amb dades persistents
 VOLUME ${hdfs_simulat}
-CMD ["bash"]
+#CMD ["bash"]
 
 # Exposam el port utilitzat per JupyterLab
 EXPOSE ${jupyterlab_web}

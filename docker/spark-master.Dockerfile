@@ -6,7 +6,7 @@ FROM openjdk:8-jre-slim
 ## Descarregam e instal·lam les dependències
 # Definim les variables del Dockerfile
 ARG hdfs_simulat=/opt/workspace #directori compartit on simulam HDFS
-ARG spark_version=3.5.1
+#ARG spark_version=3.5.1
 ARG spark_master_web=8080 # port per a la interfície web del node master
 
 # Definim les variables d'entorn amb el directori que simula HDFS
@@ -32,10 +32,10 @@ RUN apt-get update -y && \
     rm spark.tgz
 
 # Definim les variables d'entorn de Spark
-ENV SPARK_HOME /usr/bin/spark-${spark_version}-bin-hadoop3
-ENV SPARK_MASTER_HOST spark-master
-ENV SPARK_MASTER_PORT 7077
-ENV PYSPARK_PYTHON python3
+ENV SPARK_HOME=/usr/bin/spark-${spark_version}-bin-hadoop3
+ENV SPARK_MASTER_HOST=spark-master
+ENV SPARK_MASTER_PORT=7077
+ENV PYSPARK_PYTHON=python3
 
 # Exposam el port perquè els nodes worker es puguin connectar al node master
 EXPOSE ${SPARK_MASTER_PORT}
@@ -46,7 +46,7 @@ EXPOSE ${spark_master_web}
 ## Executam les ordres en arrencar el contenidor
 # Montam el HDFS simulat en una carpeta amb dades persistents
 VOLUME ${hdfs_simulat}
-CMD ["bash"]
+#CMD ["bash"]
 
 # Especificam la ruta de treball dins del contenidor
 WORKDIR ${SPARK_HOME}
